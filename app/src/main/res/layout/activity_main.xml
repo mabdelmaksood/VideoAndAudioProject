@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CCB4B4B4"
     tools:context=".MainActivity">
 
     <VideoView
@@ -19,13 +20,54 @@
         android:id="@+id/btnVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_margin="20dp"
+        android:background="#FFF"
         android:fadingEdgeLength="15dp"
         android:requiresFadingEdge="horizontal|vertical"
         android:text="play video"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Video" />
+
+    <Button
+        android:id="@+id/audiobtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:alpha="1"
+        android:background="@android:drawable/ic_lock_silent_mode_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Video"
+        app:layout_goneMarginEnd="20dp"
+        app:layout_goneMarginRight="20dp"/>
+
+    <Button
+        android:id="@+id/audiobtn2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:alpha="0"
+        android:background="@android:drawable/ic_lock_silent_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Video"
+        app:layout_goneMarginEnd="20dp"
+        app:layout_goneMarginRight="20dp" />
+
+    <SeekBar
+        android:id="@+id/audioSeeker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:alpha="1"
+        android:background="#fff"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnVideo"
+        app:layout_constraintTop_toBottomOf="@+id/audiobtn2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
